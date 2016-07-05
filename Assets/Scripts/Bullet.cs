@@ -1,21 +1,29 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
-public class Bullet : MonoBehaviour {
-    // Use this for initialization
-    void Start () {
-    }
-   
-    // Update is called once per frame
-    void Update () {
-       
-    }  
-    void OnCollisionEnter2D(Collision2D col){
-        if(col.gameObject.tag == "Enemy"){
-            Enemy em = col.gameObject.GetComponent<Enemy>();
-            em.Health -= 5f;
-            Debug.Log("Hut");
-            Destroy(gameObject);
+
+public class Bullet : MonoBehaviour 
+{
+    [SerializeField]
+    private GameObject[] Effects;
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        switch (coll.gameObject.tag)
+        {
+            case "Player":
+                break;
+            case "Box":
+                Destroy(0);
+                break;
+            default:
+                Destroy(1);
+                break;
         }
-}
+    }
+
+    void Destroy(int effectIndex)
+    {
+        Destroy(this.gameObject);
+        Destroy(Instantiate(Effects[effectIndex], transform.position, transform.rotation), 3f);
+    }
 }
