@@ -15,6 +15,8 @@ public class CharController : MonoBehaviour
     private GameObject bulletPrefab;
     [SerializeField]
     private Transform muzzleFlashPrefab;
+    [SerializeField]
+    private GameObject gunshotSound;
 
     private Transform groundCheck;
     const float groundCheckRadius = .2f;
@@ -86,11 +88,13 @@ public class CharController : MonoBehaviour
     public void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation) as GameObject;
+        GameObject sound = Instantiate(gunshotSound, transform.position, transform.rotation) as GameObject;
         Transform clone = Instantiate(muzzleFlashPrefab, firePoint.position, firePoint.rotation) as Transform;
         clone.parent = firePoint;
         float size = Random.Range(.6f, 0.9f);
         clone.localScale = new Vector3(size, size, size);
         Destroy(clone.gameObject, 0.02f);
+        Destroy(sound, .6f);
 
 
         if (!facingRight)
