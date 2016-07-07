@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7e18ab4b08eba5a4f83d6fd6c7c5c85e
-timeCreated: 1467749764
+timeCreated: 1467842977
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -18,6 +18,34 @@ TextureImporter:
     21300022: ui_big_pieces_11
     21300024: ui_big_pieces_12
     21300026: ui_big_pieces_13
+    21300028: ui_big_pieces_14
+    21300030: ui_big_pieces_15
+    21300032: ui_big_pieces_16
+    21300034: ui_big_pieces_17
+    21300036: ui_big_pieces_18
+    21300038: ui_big_pieces_19
+    21300040: ui_big_pieces_20
+    21300042: ui_big_pieces_21
+    21300044: ui_big_pieces_22
+    21300046: ui_big_pieces_23
+    21300048: ui_big_pieces_24
+    21300050: ui_big_pieces_25
+    21300052: ui_big_pieces_26
+    21300054: ui_big_pieces_27
+    21300056: ui_big_pieces_28
+    21300058: ui_big_pieces_29
+    21300060: ui_big_pieces_30
+    21300062: ui_big_pieces_31
+    21300064: ui_big_pieces_32
+    21300066: ui_big_pieces_33
+    21300068: ui_big_pieces_34
+    21300070: ui_big_pieces_35
+    21300072: ui_big_pieces_36
+    21300074: ui_big_pieces_37
+    21300076: ui_big_pieces_38
+    21300078: ui_big_pieces_39
+    21300080: ui_big_pieces_40
+    21300082: ui_big_pieces_41
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -64,17 +92,6 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: ui_big_pieces_0
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 417
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: ui_big_pieces_1
       rect:
         serializedVersion: 2
@@ -214,6 +231,318 @@ TextureImporter:
         y: 28
         width: 28
         height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_14
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 423
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_15
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 508
+        width: 74
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_16
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 514
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_17
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 498
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_18
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 482
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_19
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 514
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_20
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 498
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_21
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 482
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_22
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 514
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_23
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 498
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_24
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 482
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_25
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 482
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_26
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 498
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_27
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 514
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_28
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 481
+        width: 74
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_29
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 482
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_30
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 482
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_31
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 240
+        width: 158
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -79, y: 20}
+        - {x: -79, y: -20}
+        - {x: 79, y: -20}
+        - {x: 79, y: 20}
+    - name: ui_big_pieces_32
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 449
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 449
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_34
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 449
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_35
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 433
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_36
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 433
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_37
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 433
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 433
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_39
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 417
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_40
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 417
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_41
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 417
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
