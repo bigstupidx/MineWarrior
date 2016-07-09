@@ -18,9 +18,16 @@ public class Enemy : MonoBehaviour
         mybody = this.GetComponent<Rigidbody2D>();
         MyWidth = this.GetComponent<SpriteRenderer>().bounds.extents.x;
     }
-
-    // Update is called once per frame
-    void FixedUpdate()
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Bullet")
+        {
+            Health -= 50;
+            Debug.Log("Hit");
+        }
+    }
+        // Update is called once per frame
+        void FixedUpdate()
     {
         Vector2 lineCastPos = myTrans.position - myTrans.right * MyWidth;
         Debug.DrawLine(lineCastPos, lineCastPos - Vector2.up);
