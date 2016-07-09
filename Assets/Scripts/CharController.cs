@@ -30,6 +30,7 @@ public class CharController : MonoBehaviour
     private Transform firePoint;
     private float timeToFire = 0;
     private Animator anim;
+    private PlayerHealth healthManager;
 
     void Awake() 
 	{
@@ -38,6 +39,7 @@ public class CharController : MonoBehaviour
         firePoint = transform.Find("FirePoint");
         body2D = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        healthManager = GetComponent<PlayerHealth>();
     }
 
     void FixedUpdate()
@@ -131,7 +133,7 @@ public class CharController : MonoBehaviour
     {
         if(coll.gameObject.tag == "Enemy")
         {
-            Die();
+            healthManager.TakeDamage(25f);
         }
     }
 
