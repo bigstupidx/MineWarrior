@@ -8,13 +8,14 @@ public class Camera2DFollow : MonoBehaviour
     public float lookAheadFactor = 3;
     public float lookAheadReturnSpeed = 0.5f;
     public float lookAheadMoveThreshold = 0.1f;
-
+    
+    private CharInput charInput;
     private float m_OffsetZ;
     private Vector3 m_LastTargetPosition;
     private Vector3 m_CurrentVelocity;
     private Vector3 m_LookAheadPos;
     private float shakeTimer;
-
+    
     [SerializeField]
     private float shakeTime;
     [SerializeField]
@@ -25,6 +26,7 @@ public class Camera2DFollow : MonoBehaviour
         m_LastTargetPosition = target.position;
         m_OffsetZ = (transform.position - target.position).z;
         transform.parent = null;
+        charInput = GameObject.Find("Player").GetComponent<CharInput>();
     }
 
     private void Update()
@@ -49,11 +51,23 @@ public class Camera2DFollow : MonoBehaviour
         transform.position = newPos;
 
         m_LastTargetPosition = target.position;
-      
+
+
+#if UNITY_IOS
+
         if (Input.GetButtonDown("Fire1"))
         {
             ShakeCamera(shakeAmount, shakeTime);
         }
+
+#elif UNITY_EDITOR
+
+        if (charInput.Shoot == true)
+        {
+            ShakeCamera(shakeAmount, shakeTime);
+        }
+
+#endif
 
         if (shakeTimer >= 0)
         {

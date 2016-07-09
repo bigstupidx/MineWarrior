@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ArrayOfBasePlayers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BasePlayers>
+    <walkingSpriteID>0</walkingSpriteID>
+    <name>hgfhgf</name>
+    <walkingSpritePath>8Dir_Guy.png</walkingSpritePath>
+    <walkingSpriteDirectory>Assets/Editor/RPGM2k16/_Resources/Charasets/</walkingSpriteDirectory>
+    <faceGFXPath />
+    <description>Type a description for the Player.</description>
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>13</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+  <BasePlayers>
+    <walkingSpriteID>0</walkingSpriteID>
+    <name>Empty</name>
+    <walkingSpritePath />
+    <walkingSpriteDirectory />
+    <faceGFXPath />
+    <description>Type a description for the Player.</description>
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+  <BasePlayers>
+    <walkingSpriteID>0</walkingSpriteID>
+    <name>Empty</name>
+    <walkingSpritePath />
+    <walkingSpriteDirectory />
+    <faceGFXPath />
+    <description>Type a description for the Player.</description>
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+  <BasePlayers>
+    <walkingSpriteID>0</walkingSpriteID>
+    <name>Empty</name>
+    <walkingSpritePath />
+    <walkingSpriteDirectory />
+    <faceGFXPath />
+    <description>Type a description for the Player.</description>
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+  <BasePlayers>
+    <walkingSpriteID>0</walkingSpriteID>
+    <name>Empty</name>
+    <walkingSpritePath />
+    <walkingSpriteDirectory />
+    <faceGFXPath />
+    <description>Type a description for the Player.</description>
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+</ArrayOfBasePlayers>

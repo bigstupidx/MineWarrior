@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ArrayOfBasePlayers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BasePlayers>
+    <name>Paul </name>
+    <spritePath />
+    <faceGFXPath />
+    <description>This is a test.</description>
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>11</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+  <BasePlayers>
+    <name>Megan</name>
+    <spritePath />
+    <faceGFXPath />
+    <description>THIS IS ANOTHER TEST</description>
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+  <BasePlayers>
+    <name>Empty</name>
+    <spritePath />
+    <faceGFXPath />
+    <description />
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+  <BasePlayers>
+    <name>Empty</name>
+    <spritePath />
+    <faceGFXPath />
+    <description />
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+  <BasePlayers>
+    <name>Empty</name>
+    <spritePath />
+    <faceGFXPath />
+    <description />
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+  <BasePlayers>
+    <name>Empty</name>
+    <spritePath />
+    <faceGFXPath />
+    <description />
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+  <BasePlayers>
+    <name>Empty</name>
+    <spritePath />
+    <faceGFXPath />
+    <description />
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+  <BasePlayers>
+    <name>Empty</name>
+    <spritePath />
+    <faceGFXPath />
+    <description />
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+  <BasePlayers>
+    <name>Empty</name>
+    <spritePath />
+    <faceGFXPath />
+    <description />
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+  <BasePlayers>
+    <name>Empty</name>
+    <spritePath />
+    <faceGFXPath />
+    <description />
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+  <BasePlayers>
+    <name>Empty</name>
+    <spritePath />
+    <faceGFXPath />
+    <description />
+    <pClass />
+    <weapon />
+    <sheild />
+    <head />
+    <body />
+    <accessory />
+    <arraySize>0</arraySize>
+    <initialLevel>1</initialLevel>
+    <maxLevel>100</maxLevel>
+    <classID>0</classID>
+  </BasePlayers>
+</ArrayOfBasePlayers>

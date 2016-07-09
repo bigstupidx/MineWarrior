@@ -6,13 +6,72 @@ public class CharInput : MonoBehaviour
 {
     private CharController Character;
     private bool Jump;
-    private bool Shoot;
+    public bool Shoot;
+
+    public GameObject buttonControls;
 
     void Awake() 
 	{
         Character = GetComponent<CharController>();
+        buttonControls = GameObject.Find("Buttons");
     }
- 
+
+
+#if UNITY_IOS || UNITY_ANDROID
+
+    void Start()
+    {
+        buttonControls.SetActive(true);
+    }
+
+    private float h;
+
+    public void buttonLeft()
+    {
+        h = -1;
+    }
+
+    public void buttonRight()
+    {
+        h = 1;
+    }
+
+    public void buttonReleased()
+    {
+        h = 0;
+    }
+
+    public void buttonJump()
+    {
+        Jump = true;
+    }
+
+    public void buttonShoot()
+    {
+        Shoot = true;
+    }
+
+    void Update()
+    {
+
+    }
+
+    private void FixedUpdate()
+    {
+        Character.TakeInput(h, Jump, Shoot);
+
+        Jump = false;
+        Shoot = false;
+    }
+
+
+#elif UNITY_EDITOR
+
+    void Start()
+    {
+        buttonControls.SetActive(false);
+    }
+
     void Update() 
 	{
         if(!Jump)
@@ -32,4 +91,5 @@ public class CharInput : MonoBehaviour
         Jump = false;
         Shoot = false;
     }
+#endif
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CharController : MonoBehaviour 
 {
@@ -17,9 +18,12 @@ public class CharController : MonoBehaviour
     private Transform muzzleFlashPrefab;
     [SerializeField]
     private GameObject gunshotSound;
+    [SerializeField]
+    private bool doubleJump = true;
 
     private Transform groundCheck;
     const float groundCheckRadius = .2f;
+    [SerializeField]
     private bool Grounded;
     private Rigidbody2D body2D;
     private bool facingRight = true;
@@ -47,6 +51,7 @@ public class CharController : MonoBehaviour
             if (colliders[i].gameObject != gameObject)
             {
                 Grounded = true;
+                doubleJump = true;
                 anim.SetBool("Grounded", true);
             }
         }
@@ -72,13 +77,19 @@ public class CharController : MonoBehaviour
         {
             Flip();
         }
-        
-        if(Grounded && jump)
+
+        if (Grounded == false && doubleJump == true && jump)
+        {
+            doubleJump = false;
+            body2D.AddForce(new Vector2(0f, JumpForce));
+        }
+
+        if (Grounded && jump)
         {
             Grounded = false;
             body2D.AddForce(new Vector2(0f, JumpForce));
         }
-        
+                
         if(shoot)
         {
             Shoot();
@@ -114,5 +125,18 @@ public class CharController : MonoBehaviour
         Vector3 playerScale = transform.localScale;
         playerScale.x *= -1;
         transform.localScale = playerScale;
+    }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if(coll.gameObject.tag == "Enemy")
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
     }
 }
