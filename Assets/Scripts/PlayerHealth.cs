@@ -9,8 +9,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private Image HUD;
 
-    private float playerHealth = 100f;
-    
+    private float playerHealth = 100f;    
     private CharController charController;
 
     void Awake()

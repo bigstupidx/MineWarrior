@@ -15,6 +15,9 @@ public class Bullet : MonoBehaviour
             case "Box":
                 Destroy(0);
                 break;
+            case "Enemy":
+                Destroy(2);
+                break;
             default:
                 Destroy(1);
                 break;

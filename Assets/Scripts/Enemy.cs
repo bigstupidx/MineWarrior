@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Health = 20;
+        Health = 100;
         myTrans = this.transform;
         mybody = this.GetComponent<Rigidbody2D>();
         MyWidth = this.GetComponent<SpriteRenderer>().bounds.extents.x;
@@ -23,7 +23,10 @@ public class Enemy : MonoBehaviour
         if (coll.gameObject.tag == "Bullet")
         {
             Health -= 50;
-            Debug.Log("Hit");
+            if(Health <= 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
         // Update is called once per frame
@@ -32,7 +35,7 @@ public class Enemy : MonoBehaviour
         Vector2 lineCastPos = myTrans.position - myTrans.right * MyWidth;
         Debug.DrawLine(lineCastPos, lineCastPos - Vector2.up);
         bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos - Vector2.up, enemyMask);
-
+        
         if (!isGrounded)
         {
             Vector3 currRot = myTrans.eulerAngles;
