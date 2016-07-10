@@ -46,6 +46,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.38494, y: 1.1004866, z: 0}
   m_LocalScale: {x: 0.30356184, y: 0.08994793, z: 2.88557}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 488564}
   m_Father: {fileID: 0}
@@ -59,6 +60,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.47, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 480508}
   m_RootOrder: 0
@@ -152,7 +154,7 @@ MonoBehaviour:
   Effects:
   - {fileID: 105234, guid: d9cf33da8f2b0374a95e8f91e8b03fa0, type: 2}
   - {fileID: 105234, guid: a287ebf3006fe7a4d9e7f07d573b9822, type: 2}
-  - {fileID: 0}
+  - {fileID: 105234, guid: 9d866ba80c454be48b93edc92d616c98, type: 2}
   - {fileID: 198418, guid: 69073c4c20e5cd342995ca0b5a6402a9, type: 2}
 --- !u!120 &12083586
 LineRenderer:
