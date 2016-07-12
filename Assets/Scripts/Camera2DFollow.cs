@@ -53,16 +53,17 @@ public class Camera2DFollow : MonoBehaviour
         m_LastTargetPosition = target.position;
 
 
+
 #if UNITY_IOS
 
-        if (Input.GetButtonDown("Fire1"))
+        if (charInput.Shoot == true)
         {
             ShakeCamera(shakeAmount, shakeTime);
         }
 
 #elif UNITY_EDITOR
 
-        if (charInput.Shoot == true)
+        if (Input.GetButtonDown("Fire1"))
         {
             ShakeCamera(shakeAmount, shakeTime);
         }

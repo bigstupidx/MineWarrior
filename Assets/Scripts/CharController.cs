@@ -20,8 +20,6 @@ public class CharController : MonoBehaviour
     private GameObject gunshotSound;
     [SerializeField]
     private bool doubleJump = true;
-    [SerializeField]
-    private Vector2 hitForce;
 
     private Transform groundCheck;
     const float groundCheckRadius = .2f;
@@ -137,7 +135,6 @@ public class CharController : MonoBehaviour
         if(coll.gameObject.tag == "Enemy")
         {
             healthManager.TakeDamage(25f);
-            body2D.AddForce(hitForce);
         }
     }
 
