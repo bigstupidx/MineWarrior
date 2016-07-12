@@ -1866,7 +1866,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1833874189
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300048, guid: af7cf557f5abbc64db872d361aa5dfd9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee9703b1f366dec4786d28fcf1e3e5e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1966,7 +1966,6 @@ MonoBehaviour:
   muzzleFlashPrefab: {fileID: 448670, guid: 9ae8f8ca17e838444974576a6c1ce651, type: 2}
   gunshotSound: {fileID: 144162, guid: 7c646b21842f61949865c79eade8b5e5, type: 2}
   doubleJump: 0
-  hitForce: {x: 400, y: 400}
   Grounded: 0
 --- !u!50 &819039264
 Rigidbody2D:
@@ -1998,7 +1997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fillAmount: 1
   HUD: {fileID: 1752476392}
-  playerHealth: 10000
+  playerHealth: 100
 --- !u!1 &839138481
 GameObject:
   m_ObjectHideFlags: 0
@@ -3657,7 +3656,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1639296288}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8c88b316323f864478d8200b46e00d3a, type: 3}
