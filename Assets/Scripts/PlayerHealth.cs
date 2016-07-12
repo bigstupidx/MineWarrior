@@ -30,10 +30,10 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        HandleBar();
+        HandleHUD();
     }
 
-    void HandleBar()
+    void HandleHUD()
     {
         HUD.fillAmount = fillAmount;
     }
