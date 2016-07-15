@@ -9,6 +9,7 @@ TagManager:
   - AutoTile
   - Cart
   - Bullet
+  - Spider
   layers:
   - Default
   - TransparentFX
