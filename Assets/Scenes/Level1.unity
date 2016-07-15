@@ -145,7 +145,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -168,6 +168,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -208,7 +209,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 497810, guid: 3172c30a443f39249952b5e0c5ac480b, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11488338, guid: 3172c30a443f39249952b5e0c5ac480b, type: 2}
       propertyPath: buttonControls
@@ -340,7 +341,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 486086, guid: 3ff3758d87de43c41b48f717d77ae59c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ff3758d87de43c41b48f717d77ae59c, type: 2}
@@ -440,7 +441,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 404132, guid: c03ad227f3ab8704a9c4cdeae7ca3791, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 404132, guid: c03ad227f3ab8704a9c4cdeae7ca3791, type: 2}
       propertyPath: m_LocalScale.x

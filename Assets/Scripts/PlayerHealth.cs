@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     {
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
         charController = GetComponent<CharController>();
+        HUD = GameObject.Find("HUD").GetComponent<Image>();
     }
 
     public void TakeDamage(float damage)
