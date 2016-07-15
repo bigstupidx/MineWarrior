@@ -9,6 +9,7 @@ TagManager:
   - AutoTile
   - Cart
   - Bullet
+  - Coin
   layers:
   - Default
   - TransparentFX

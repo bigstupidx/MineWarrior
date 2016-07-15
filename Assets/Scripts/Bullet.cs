@@ -13,10 +13,13 @@ public class Bullet : MonoBehaviour
             case "Player":
                 break;
             case "Box":
+                Debug.Log("Box");
                 Destroy(0);
                 break;
             case "Enemy":
                 Destroy(2);
+                break;
+            case "Coin":
                 break;
             default:
                 Destroy(1);
@@ -25,8 +28,8 @@ public class Bullet : MonoBehaviour
     }
 
     void Destroy(int effectIndex)
-    {
+    {        
         Destroy(this.gameObject);
-        Destroy(Instantiate(Effects[effectIndex], transform.position, transform.rotation), 3f);
+        Destroy(Instantiate(Effects[effectIndex], transform.position, transform.rotation), 1f);
     }
 }

@@ -47,14 +47,16 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator FadePlayer()
     {
-        for (int j = 0; j <= 1; j++)
+        // loop j times
+        for (int j = 0; j <= 3; j++)
         {
-            for (float i = 1f; i >= 0; i -= 0.05f)
+            // fade out for <> seconds; changing opacity every .05 seconds.
+            for (float i = .5f; i >= 0; i -= 0.05f)
             {
                 yield return new WaitForSeconds(.01f);
                 playerSpriteRenderer.color = new Color(1f, 1f, 1f, i);
             }
-            for (float i = 0f; i <= 1; i += 0.05f)
+            for (float i = .5f; i <= 1; i += 0.05f)
             {
                 yield return new WaitForSeconds(.01f);
                 playerSpriteRenderer.color = new Color(1f, 1f, 1f, i);

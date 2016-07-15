@@ -11,8 +11,6 @@ public class CharController : MonoBehaviour
     [SerializeField]
     private LayerMask groundLayer;
     [SerializeField]
-    private float damage = 10f;
-    [SerializeField]
     private GameObject bulletPrefab;
     [SerializeField]
     private Transform muzzleFlashPrefab;
@@ -28,7 +26,6 @@ public class CharController : MonoBehaviour
     private Rigidbody2D body2D;
     private bool facingRight = true;
     private Transform firePoint;
-    private float timeToFire = 0;
     private Animator anim;
     private PlayerHealth healthManager;
 
