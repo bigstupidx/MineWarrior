@@ -456,20 +456,16 @@ PlayerSettings:
   XboxOne::enus: 1
   stringPropertyNames:
   - Build_ServiceEnabled::Build_ServiceEnabled
-  - ErrorHub_ServiceEnabled::ErrorHub_ServiceEnabled
-  - Hub_ServiceEnabled::Hub_ServiceEnabled
   - UNet_ServiceEnabled::UNet_ServiceEnabled
   - WebGL::emscriptenArgs
   - WebGL::template
   - additionalIl2CppArgs::additionalIl2CppArgs
   Build_ServiceEnabled::Build_ServiceEnabled: True
-  ErrorHub_ServiceEnabled::ErrorHub_ServiceEnabled: False
-  Hub_ServiceEnabled::Hub_ServiceEnabled: False
   UNet_ServiceEnabled::UNet_ServiceEnabled: True
   WebGL::emscriptenArgs: 
   WebGL::template: APPLICATION:Default
   additionalIl2CppArgs::additionalIl2CppArgs: 
-  cloudProjectId: 807b3692-74a3-42bf-a170-a14a7b209836
-  projectName: 465
-  organizationId: djminni
+  cloudProjectId: 
+  projectName: 
+  organizationId: 
   cloudEnabled: 0

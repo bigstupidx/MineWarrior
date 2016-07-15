@@ -42,12 +42,9 @@ public class Enemy : MonoBehaviour
             currRot.y += 180;
             myTrans.eulerAngles = currRot;
         }
-
         //Always moves forward
         Vector2 myVel = mybody.velocity;
         myVel.x = -myTrans.right.x * speed;
         mybody.velocity = myVel;
-    
-
     }
 }
