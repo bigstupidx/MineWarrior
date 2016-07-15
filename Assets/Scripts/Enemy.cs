@@ -50,8 +50,9 @@ public class Enemy : MonoBehaviour
 
     void Flip()
     {
-        Vector3 currRot = myTrans.eulerAngles;
-        currRot.y += 180;
-        myTrans.eulerAngles = currRot;
+        Vector3 currRot = myTrans.localScale;
+        currRot.x *= -1;
+        myTrans.localScale = currRot;
+        speed *= -1;
     }
 }
