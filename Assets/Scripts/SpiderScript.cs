@@ -11,12 +11,11 @@ public class SpiderScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         Debug.DrawRay(transform.position, -Vector2.up, Color.red);
-        RaycastHit2D hit = Physics2D.Raycast(transform.position,-Vector2.up, 100.3F);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position,Vector3.down);
         if(hit == true)
         {
             if(hit.collider.tag == "Player")
             {
-                Debug.Log("Hit");
                 anim.SetBool("spiderAttack", true);
                 StartCoroutine("SetBoolFalse");
             }
@@ -25,7 +24,7 @@ public class SpiderScript : MonoBehaviour {
 
     IEnumerator SetBoolFalse()
     {
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(1.0f);
         anim.SetBool("spiderAttack", false);
     }
 
