@@ -13,7 +13,6 @@ public class Bullet : MonoBehaviour
             case "Player":
                 break;
             case "Box":
-                Debug.Log("Box");
                 Destroy(0);
                 break;
             case "Enemy":

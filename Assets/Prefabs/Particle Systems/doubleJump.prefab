@@ -11,7 +11,7 @@ GameObject:
   - 198: {fileID: 19832028}
   - 199: {fileID: 19922812}
   m_Layer: 0
-  m_Name: Red
+  m_Name: doubleJump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,7 +84,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     startLifetime:
-      scalar: 1
+      scalar: 0.25
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -245,7 +245,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4284835280
+        rgba: 4285904874
       minMaxState: 0
     startSize:
       scalar: 0.2
@@ -450,11 +450,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
       minMaxState: 0
-    cnt0: 20
+    cnt0: 3
     cnt1: 30
     cnt2: 30
     cnt3: 30
-    cntmax0: 20
+    cntmax0: 5
     cntmax1: 30
     cntmax2: 30
     cntmax3: 30
@@ -1561,7 +1561,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startColor.maxColor.rgba
+      value: 4285904874
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 105234}
