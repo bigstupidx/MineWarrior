@@ -18,6 +18,8 @@ public class CharController : MonoBehaviour
     private GameObject gunshotSound;
     [SerializeField]
     private bool doubleJump = true;
+    [SerializeField]
+    private GameObject jumpEffect;
 
     private Transform groundCheck;
     const float groundCheckRadius = .2f;
@@ -82,6 +84,7 @@ public class CharController : MonoBehaviour
             doubleJump = false;
             body2D.velocity = new Vector2(body2D.velocity.x, 0);
             body2D.AddForce(new Vector2(0f, JumpForce));
+            Destroy(Instantiate(jumpEffect, transform.position, transform.rotation), 1f);
         }
 
         if (Grounded && jump)

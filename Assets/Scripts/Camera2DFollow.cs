@@ -1,4 +1,4 @@
-using UnityEngine;
+  using UnityEngine;
 using System.Collections;
 
 public class Camera2DFollow : MonoBehaviour
@@ -14,7 +14,7 @@ public class Camera2DFollow : MonoBehaviour
     private Vector3 m_LastTargetPosition;
     private Vector3 m_CurrentVelocity;
     private Vector3 m_LookAheadPos;
-    private float shakeTimer;
+    public float shakeTimer;
     
     [SerializeField]
     private float shakeTime;
