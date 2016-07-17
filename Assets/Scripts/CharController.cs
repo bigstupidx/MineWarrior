@@ -28,7 +28,7 @@ public class CharController : MonoBehaviour
     private Transform firePoint;
     private Animator anim;
     private PlayerHealth healthManager;
-
+    private Gem gem;
     void Awake() 
 	{
         // Set up references
@@ -36,7 +36,7 @@ public class CharController : MonoBehaviour
         firePoint = transform.Find("FirePoint");
         body2D = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        healthManager = GetComponent<PlayerHealth>();
+        gem = GetComponent<Gem>();
     }
 
     void FixedUpdate()
@@ -138,5 +138,12 @@ public class CharController : MonoBehaviour
     public void Die()
     {
         SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
+    }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "Gem")
+        {
+            gem.Collected();
+        }
     }
 }

@@ -10,6 +10,7 @@ TagManager:
   - Cart
   - Bullet
   - Coin
+  - Gem
   layers:
   - Default
   - TransparentFX
