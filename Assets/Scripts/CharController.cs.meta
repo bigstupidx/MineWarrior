@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: 40ccc4f985c2fc040a75b86a61947386
-timeCreated: 1467660540
+timeCreated: 1468691481
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bulletPrefab: {instanceID: 0}
+  - muzzleFlashPrefab: {instanceID: 0}
+  - gunshotSound: {instanceID: 0}
+  - jumpEffect: {fileID: 105234, guid: 9be619040b3fbeb44aab80fececdea58, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

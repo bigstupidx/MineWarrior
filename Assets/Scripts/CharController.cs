@@ -1,9 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CharController : MonoBehaviour 
 {
+    [SerializeField]
+    private GameObject door;
+    [SerializeField]
+    private int Gems;
+    [SerializeField]
+    private Text GemText;
     [SerializeField]
     private float MaxSpeed = 10f;
     [SerializeField]
@@ -18,6 +25,8 @@ public class CharController : MonoBehaviour
     private GameObject gunshotSound;
     [SerializeField]
     private bool doubleJump = true;
+    [SerializeField]
+    private GameObject jumpEffect;
 
     private Transform groundCheck;
     const float groundCheckRadius = .2f;
@@ -28,19 +37,40 @@ public class CharController : MonoBehaviour
     private Transform firePoint;
     private Animator anim;
     private PlayerHealth healthManager;
-    private Gem gem;
+    private int GemAmount;
     void Awake() 
 	{
+
+        door.SetActive(false);
+        //can.enabled = false;
+        Gems.ToString();
         // Set up references
         groundCheck = transform.Find("GroundCheck");
         firePoint = transform.Find("FirePoint");
         body2D = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        gem = GetComponent<Gem>();
+        healthManager = GetComponent<PlayerHealth>();
     }
 
     void FixedUpdate()
     {
+        //Checking if all gems in scene are collected
+        GemAmount = GameObject.FindGameObjectsWithTag("Gem").Length;
+
+        if (GemAmount <= 0)
+        {
+            door.SetActive(true);
+            Debug.Log("All Gems collected");
+        }
+        else {
+            door.SetActive(false);
+            Debug.Log("Still waiting");
+        }
+
+
+
+        /////////////////////////////////////////////
+        Debug.Log(Gems);
         Grounded = false;
         anim.SetBool("Grounded", false);
 
@@ -82,6 +112,7 @@ public class CharController : MonoBehaviour
             doubleJump = false;
             body2D.velocity = new Vector2(body2D.velocity.x, 0);
             body2D.AddForce(new Vector2(0f, JumpForce));
+            Destroy(Instantiate(jumpEffect, transform.position, transform.rotation), 1f);
         }
 
         if (Grounded && jump)
@@ -129,10 +160,11 @@ public class CharController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if(coll.gameObject.tag == "Enemy")
+        if (coll.gameObject.tag == "Enemy")
         {
             healthManager.TakeDamage(25f);
         }
+      
     }
 
     public void Die()
@@ -143,7 +175,12 @@ public class CharController : MonoBehaviour
     {
         if(col.gameObject.tag == "Gem")
         {
-            gem.Collected();
+            Destroy(col.gameObject);
+            Gems += 1;
         }
-    }
+        if(col.gameObject.tag == "spike")
+        {
+            healthManager.TakeDamage(50f);
+        }
+   }
 }
