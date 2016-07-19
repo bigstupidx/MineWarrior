@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Coins : MonoBehaviour 
 {
-    public GameObject Player;
     [SerializeField]
     GameObject coinEffect;
 
@@ -12,7 +11,7 @@ public class Coins : MonoBehaviour
         if(coll.gameObject.tag == "Player")
         {
             Destroy(this.gameObject);
-            Destroy(Instantiate(coinEffect, transform.position, transform.rotation), 1f);
+            Destroy(Instantiate(coinEffect, transform.position, transform.rotation), 2f);            
         }
     }
 }

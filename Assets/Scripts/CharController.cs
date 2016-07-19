@@ -40,10 +40,7 @@ public class CharController : MonoBehaviour
     private int GemAmount;
     void Awake() 
 	{
-
         door.SetActive(false);
-        //can.enabled = false;
-        Gems.ToString();
         // Set up references
         groundCheck = transform.Find("GroundCheck");
         firePoint = transform.Find("FirePoint");
@@ -54,23 +51,6 @@ public class CharController : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Checking if all gems in scene are collected
-        GemAmount = GameObject.FindGameObjectsWithTag("Gem").Length;
-
-        if (GemAmount <= 0)
-        {
-            door.SetActive(true);
-            Debug.Log("All Gems collected");
-        }
-        else {
-            door.SetActive(false);
-            Debug.Log("Still waiting");
-        }
-
-
-
-        /////////////////////////////////////////////
-        Debug.Log(Gems);
         Grounded = false;
         anim.SetBool("Grounded", false);
 
@@ -138,7 +118,6 @@ public class CharController : MonoBehaviour
         Destroy(clone.gameObject, 0.02f);
         Destroy(sound, .6f);
 
-
         if (!facingRight)
         { 
             bullet.GetComponent<InstantVelocity>().velocity.x *= -1;
@@ -160,11 +139,23 @@ public class CharController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll)
     {
+        switch (coll.gameObject.tag) {
+            case "Enemy":
+                healthManager.TakeDamage(25f);
+                break;
+            case "Gem":
+                GemAmount++;
+                if(GemAmount <= 0)
+                {
+                    door.SetActive(true);
+                }
+                break;
+        }
+
         if (coll.gameObject.tag == "Enemy")
         {
             healthManager.TakeDamage(25f);
-        }
-      
+        }      
     }
 
     public void Die()
@@ -173,6 +164,21 @@ public class CharController : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
+
+        switch (col.gameObject.tag) {
+
+            case "Gem":
+                Destroy(col.gameObject);
+                Gems += 1;
+                break;
+            case "Spike":
+                healthManager.TakeDamage(50f);
+                break;
+            default:
+                break;
+
+        }
+
         if(col.gameObject.tag == "Gem")
         {
             Destroy(col.gameObject);
@@ -180,7 +186,7 @@ public class CharController : MonoBehaviour
         }
         if(col.gameObject.tag == "spike")
         {
-            healthManager.TakeDamage(50f);
+            
         }
    }
 }

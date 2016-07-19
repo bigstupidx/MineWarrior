@@ -11,7 +11,7 @@ TagManager:
   - Bullet
   - Coin
   - Gem
-  - spike
+  - Spike
   layers:
   - Default
   - TransparentFX

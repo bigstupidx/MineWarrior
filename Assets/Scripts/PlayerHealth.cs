@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
     private SpriteRenderer playerSpriteRenderer;
     private CharController charController;
+    private bool isDamageable = true;
 
     void Awake()
     {
@@ -23,16 +24,19 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        playerHealth -= damage;
-        fillAmount = playerHealth / 100;
+        if (isDamageable)
+        {
+            playerHealth -= damage;
+            fillAmount = playerHealth / 100;
 
-        if (playerHealth <= 0)
-        {
-            charController.Die();
-        }
-        else
-        {
-            StartCoroutine(FadePlayer());
+            if (playerHealth <= 0)
+            {
+                charController.Die();
+            }
+            else
+            {
+                StartCoroutine(FadePlayer());
+            }
         }
     }
 
@@ -48,6 +52,7 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator FadePlayer()
     {
+        isDamageable = false;
         // loop j times
         for (int j = 0; j <= 3; j++)
         {
@@ -63,5 +68,6 @@ public class PlayerHealth : MonoBehaviour
                 playerSpriteRenderer.color = new Color(1f, 1f, 1f, i);
             }        
         }
+        isDamageable = true;
     }
 }

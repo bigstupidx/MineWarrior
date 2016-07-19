@@ -27,6 +27,4 @@ public class SpiderScript : MonoBehaviour {
         yield return new WaitForSeconds(1.0f);
         anim.SetBool("spiderAttack", false);
     }
-
-
 }
