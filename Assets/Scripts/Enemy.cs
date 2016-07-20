@@ -11,6 +11,10 @@ public class Enemy : MonoBehaviour
     Rigidbody2D mybody;
     float MyWidth;
     public float speed;
+
+    [SerializeField]
+    private GameObject enemyEffect;
+
     // Use this for initialization
     void Awake()
     {
@@ -21,13 +25,19 @@ public class Enemy : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "Bullet")
+        switch (coll.gameObject.tag)
         {
-            Health -= 50;
-            if(Health <= 0)
-            {
+            case "Bullet":
+                Health -= 50;
+                if (Health <= 0)
+                {
+                    Destroy(this.gameObject);
+                }
+                break;
+            case "Box":
                 Destroy(this.gameObject);
-            }
+                Destroy(Instantiate(enemyEffect, transform.position, transform.rotation), 2f);
+                break;
         }
     }
     // Update is called once per frame
