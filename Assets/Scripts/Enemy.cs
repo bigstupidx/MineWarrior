@@ -44,16 +44,10 @@ public class Enemy : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 lineCastPos = myTrans.position - myTrans.right * MyWidth;
-        Vector2 lineCastPos2 = myTrans.position - myTrans.forward * MyWidth;
 
-        bool isColliding = Physics2D.Linecast(lineCastPos2, lineCastPos2 - Vector2.right, enemyMask);
         bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos - Vector2.up, enemyMask);
 
         if (!isGrounded)
-        {
-            Flip();
-        }
-        if (isColliding)
         {
             Flip();
         }

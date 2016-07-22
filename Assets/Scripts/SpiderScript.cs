@@ -1,30 +1,98 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpiderScript : MonoBehaviour {
-    public Animator anim;
-	// Use this for initialization
-	void Awake () {
-        anim = GetComponent<Animator>();
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-        Debug.DrawRay(transform.position, -Vector2.up, Color.red);
-        RaycastHit2D hit = Physics2D.Raycast(transform.position,Vector3.down);
-        if(hit == true)
+public class SpiderScript : MonoBehaviour
+{
+
+    [SerializeField]
+    Transform sightStart, sightEnd;
+
+    Vector2 startPos, endPos;
+
+    Vector2 topPos;
+    bool down = false, up = false;
+
+    Vector2 velocity;
+
+    MState _cMState;
+
+    public enum MState
+    {
+        Idle,
+        Down,
+        Up
+    }
+
+    void Awake()
+    {
+        startPos = transform.position;
+        topPos = new Vector2(transform.position.x, 25f);
+    }
+
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
+        Raycasting();
+        switch (_cMState)
         {
-            if(hit.collider.tag == "Player")
+            case MState.Idle:
+                break;
+            case MState.Down:
+                moveDown();
+                break;
+            case MState.Up:
+                moveUp();
+                StartCoroutine(TurnIdle());
+                break;
+        }
+
+    }
+
+    void moveDown()
+    {
+        transform.position = Vector2.SmoothDamp(transform.position, endPos, ref velocity, .5f);
+    }
+
+    void moveUp()
+    {
+        transform.position = Vector2.SmoothDamp(transform.position, topPos, ref velocity, .5f);
+    }
+
+    void Raycasting()
+    {
+        Debug.DrawLine(sightStart.position, sightEnd.position, Color.green);
+        RaycastHit2D hit = Physics2D.Linecast(sightStart.position, sightEnd.position, 1 << LayerMask.NameToLayer("Player"));
+        if (hit)
+        {
+            if (hit.collider.tag == "Player" && _cMState == MState.Idle)
             {
-                anim.SetBool("spiderAttack", true);
-                StartCoroutine("SetBoolFalse");
+                _cMState = MState.Down;               
+                endPos = hit.transform.position;
+                StartCoroutine(GoBackUp());
             }
         }
     }
 
-    IEnumerator SetBoolFalse()
+    void OnTriggerEnter2D()
     {
-        yield return new WaitForSeconds(1.0f);
-        anim.SetBool("spiderAttack", false);
+        _cMState = MState.Up;
+    }
+
+    IEnumerator TurnIdle()
+    {
+        yield return new WaitForSeconds(.5f);
+        if (_cMState == MState.Up)
+            _cMState = MState.Idle;
+    }
+
+    IEnumerator GoBackUp()
+    {
+        yield return new WaitForSeconds(2f);
+        if(_cMState == MState.Down)
+            _cMState = MState.Up;
     }
 }

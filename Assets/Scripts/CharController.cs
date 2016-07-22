@@ -5,39 +5,61 @@ using UnityEngine.UI;
 
 public class CharController : MonoBehaviour 
 {
-    [SerializeField]
-    private GameObject door;
-    [SerializeField]
-    private int Gems;
-    [SerializeField]
-    private Text GemText;
-    [SerializeField]
-    private float MaxSpeed = 10f;
-    [SerializeField]
-    private float JumpForce = 400f;
-    [SerializeField]
-    private LayerMask groundLayer;
-    [SerializeField]
-    private GameObject bulletPrefab;
-    [SerializeField]
-    private Transform muzzleFlashPrefab;
-    [SerializeField]
-    private GameObject gunshotSound;
-    [SerializeField]
-    private bool doubleJump = true;
-    [SerializeField]
-    private GameObject jumpEffect;
 
-    private Transform groundCheck;
-    const float groundCheckRadius = .2f;
+    #region Inspector Variables
+    [Header("Movement Variables")]
+
     [SerializeField]
-    private bool Grounded;
-    private Rigidbody2D body2D;
-    private bool facingRight = true;
-    private Transform firePoint;
-    private Animator anim;
-    private PlayerHealth healthManager;
-    private int GemAmount;
+    float MaxSpeed = 10f;
+    [SerializeField]
+    float JumpForce = 400f;
+    [SerializeField]
+    LayerMask groundLayer;
+    [SerializeField]
+    GameObject jumpEffect;
+
+    [Header("Shooting Variables")]
+
+    [SerializeField]
+    GameObject bulletPrefab;
+    [SerializeField]
+    Transform muzzleFlashPrefab;
+    [SerializeField]
+    GameObject gunshotSound;
+
+    [Header("Misc Variables")]
+
+    [SerializeField]
+    GameObject door;    
+    [SerializeField]
+    Text GemText;
+
+    #endregion
+
+    #region Private Variables
+
+    int totalGems;
+    private int collectedGems;
+
+    // Movement
+
+    bool doubleJump = true;
+    Transform groundCheck;
+    const float groundCheckRadius = .2f;
+    bool Grounded;
+    Rigidbody2D body2D;
+    bool facingRight = true;
+    Animator anim;
+
+    // Shooting
+
+    Transform firePoint;
+
+    // References
+    PlayerHealth healthManager;
+
+    #endregion
+
     void Awake() 
 	{
         door.SetActive(false);
@@ -47,6 +69,7 @@ public class CharController : MonoBehaviour
         body2D = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         healthManager = GetComponent<PlayerHealth>();
+        totalGems = GameObject.FindGameObjectsWithTag("Gem").Length;
     }
 
     void FixedUpdate()
@@ -137,27 +160,6 @@ public class CharController : MonoBehaviour
         transform.localScale = playerScale;
     }
 
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        switch (coll.gameObject.tag) {
-            case "Enemy":
-                healthManager.TakeDamage(25f);
-                break;
-            case "Gem":
-                GemAmount++;
-                if(GemAmount <= 0)
-                {
-                    door.SetActive(true);
-                }
-                break;
-        }
-
-        if (coll.gameObject.tag == "Enemy")
-        {
-            healthManager.TakeDamage(25f);
-        }      
-    }
-
     public void Die()
     {
         SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
@@ -168,25 +170,36 @@ public class CharController : MonoBehaviour
         switch (col.gameObject.tag) {
 
             case "Gem":
-                Destroy(col.gameObject);
-                Gems += 1;
+                Destroy(col.gameObject);                
+                collectedGems++;
+                Debug.Log("Collected Gems: " + collectedGems + ". Total Gems: " + totalGems);
+                if (collectedGems == totalGems)
+                {
+                    Debug.Log("yeet");
+                    door.SetActive(true);
+                }
                 break;
-            case "Spike":
-                healthManager.TakeDamage(50f);
+            case "Enemy":
+                healthManager.TakeDamage(25f);
                 break;
             default:
                 break;
-
-        }
-
-        if(col.gameObject.tag == "Gem")
-        {
-            Destroy(col.gameObject);
-            Gems += 1;
-        }
-        if(col.gameObject.tag == "spike")
-        {
-            
         }
    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+
+        switch (col.gameObject.tag)
+        {
+            case "Spike":
+                healthManager.TakeDamage(50f);
+                break;
+            case "Enemy":
+                healthManager.TakeDamage(25f);
+                break;
+            default:
+                break;
+        }
+    }
 }
