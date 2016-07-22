@@ -15,13 +15,12 @@ public class Door : MonoBehaviour
                 StartCoroutine(WaitThenLoad());                
                 break;
         }
-
     }
 
     IEnumerator WaitThenLoad()
     {
         Destroy(Instantiate(sceneChange, new Vector3(transform.position.x, transform.position.y - 10f), Quaternion.identity), 3f);
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);        
+        SceneManager.LoadScene("Level Select");        
     }
 }

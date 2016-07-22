@@ -171,11 +171,9 @@ public class CharController : MonoBehaviour
 
             case "Gem":
                 Destroy(col.gameObject);                
-                collectedGems++;
-                Debug.Log("Collected Gems: " + collectedGems + ". Total Gems: " + totalGems);
+                collectedGems++;                
                 if (collectedGems == totalGems)
                 {
-                    Debug.Log("yeet");
                     door.SetActive(true);
                 }
                 break;
