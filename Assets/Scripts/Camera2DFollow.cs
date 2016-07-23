@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Camera2DFollow : MonoBehaviour
 {
-    public Transform target;
+    Transform target;
     public float damping = 1;
     public float lookAheadFactor = 3;
     public float lookAheadReturnSpeed = 0.5f;
@@ -27,6 +27,7 @@ public class Camera2DFollow : MonoBehaviour
         m_OffsetZ = (transform.position - target.position).z;
         transform.parent = null;
         charInput = GameObject.Find("Player").GetComponent<CharInput>();
+        target = GameObject.Find("Player").transform;
     }
 
     private void Update()
