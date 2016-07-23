@@ -218,9 +218,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode: 0
   intensity: 0.414
-  chromaticAberration: 7.52
+  chromaticAberration: 75.22
   axialAberration: 0.5
-  blur: 0.36
+  blur: 0.56
   blurSpread: 0.759
   luminanceDependency: 0.25
   blurDistance: 2.5
@@ -386,7 +386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8238cc53530b64fbb7828c3d3bb591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   damping: 1
   lookAheadFactor: 3
   lookAheadReturnSpeed: 0.5
