@@ -23,11 +23,12 @@ public class Camera2DFollow : MonoBehaviour
 
     private void Start()
     {
+        target = GameObject.Find("Player").transform;
         m_LastTargetPosition = target.position;
         m_OffsetZ = (transform.position - target.position).z;
         transform.parent = null;
         charInput = GameObject.Find("Player").GetComponent<CharInput>();
-        target = GameObject.Find("Player").transform;
+        
     }
 
     private void Update()
