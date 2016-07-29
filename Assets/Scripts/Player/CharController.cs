@@ -62,14 +62,15 @@ public class CharController : MonoBehaviour
 
     void Awake() 
 	{
-        door.SetActive(false);
         // Set up references
+        door = GameObject.FindGameObjectWithTag("Door");
         groundCheck = transform.Find("GroundCheck");
         firePoint = transform.Find("FirePoint");
         body2D = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         healthManager = GetComponent<PlayerHealth>();
         totalGems = GameObject.FindGameObjectsWithTag("Gem").Length;
+        door.SetActive(false);
     }
 
     void FixedUpdate()

@@ -12,6 +12,7 @@ TagManager:
   - Coin
   - Gem
   - Spike
+  - Door
   layers:
   - Default
   - TransparentFX
