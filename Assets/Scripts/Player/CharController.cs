@@ -15,8 +15,7 @@ public class CharController : MonoBehaviour
     float JumpForce = 400f;
     [SerializeField]
     LayerMask groundLayer;
-    [SerializeField]
-    GameObject jumpEffect;
+
 
     [Header("Shooting Variables")]
 
@@ -34,15 +33,30 @@ public class CharController : MonoBehaviour
     [SerializeField]
     Text GemText;
 
+    [Header("Particle Effects")]
+    [SerializeField]
+    GameObject gemRed;
+    [SerializeField]
+    GameObject gemGreen;
+    [SerializeField]
+    GameObject gemBlue;
+    [SerializeField]
+    GameObject jumpEffect;
+
     #endregion
 
     #region Private Variables
 
+    // Gems
     int totalGems;
     private int collectedGems;
+    GameObject GemUI;
+    GameObject Gem1, Gem2, Gem3;
+    [SerializeField]
+    Sprite Red, Green, Blue;
+
 
     // Movement
-
     bool doubleJump = true;
     Transform groundCheck;
     const float groundCheckRadius = .2f;
@@ -52,7 +66,6 @@ public class CharController : MonoBehaviour
     Animator anim;
 
     // Shooting
-
     Transform firePoint;
 
     // References
@@ -70,7 +83,15 @@ public class CharController : MonoBehaviour
         anim = GetComponent<Animator>();
         healthManager = GetComponent<PlayerHealth>();
         totalGems = GameObject.FindGameObjectsWithTag("Gem").Length;
+        GemUI = GameObject.Find("GemUI");
+        Gem1 = GameObject.Find("Gem1");
+        Gem2 = GameObject.Find("Gem2");
+        Gem3 = GameObject.Find("Gem3");
+
         door.SetActive(false);
+        Gem1.SetActive(false);
+        Gem2.SetActive(false);
+        Gem3.SetActive(false);
     }
 
     void FixedUpdate()
@@ -171,11 +192,17 @@ public class CharController : MonoBehaviour
         switch (col.gameObject.tag) {
 
             case "Gem":
-                Destroy(col.gameObject);                
-                collectedGems++;                
-                if (collectedGems == totalGems)
+                switch (col.gameObject.name)
                 {
-                    door.SetActive(true);
+                    case "Red":
+                        DestroyGem(col.gameObject, gemRed, Red);
+                        break;
+                    case "Green":
+                        DestroyGem(col.gameObject, gemGreen, Green);
+                        break;
+                    case "Blue":
+                        DestroyGem(col.gameObject, gemBlue, Blue);
+                        break;
                 }
                 break;
             case "Enemy":
@@ -201,4 +228,34 @@ public class CharController : MonoBehaviour
                 break;
         }
     }
+
+    void DestroyGem (GameObject gem, GameObject gemEffect, Sprite gemImg)
+    {
+        Destroy(gem);
+        collectedGems++;
+        if (collectedGems == totalGems)
+        {
+            door.SetActive(true);
+        }        
+        Destroy(Instantiate(gemEffect, gem.transform.position, gem.transform.rotation), 3);
+
+        switch (collectedGems)
+        {
+            case 0:
+                break;
+            case 1:
+                Gem1.SetActive(true);
+                Gem1.GetComponent<Image>().sprite = gemImg;
+                break;
+            case 2:
+                Gem2.SetActive(true);
+                Gem2.GetComponent<Image>().sprite = gemImg;
+                break;
+            case 3:
+                Gem3.SetActive(true);
+                Gem3.GetComponent<Image>().sprite = gemImg;
+                break;
+        }
+    }
+
 }

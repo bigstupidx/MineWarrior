@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7e18ab4b08eba5a4f83d6fd6c7c5c85e
-timeCreated: 1468555059
+timeCreated: 1469811826
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -62,6 +62,8 @@ TextureImporter:
     21300110: ui_big_pieces_55
     21300112: ui_big_pieces_56
     21300114: ui_big_pieces_57
+    21300116: ui_big_pieces_58
+    21300118: ui_big_pieces_59
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -761,6 +763,28 @@ TextureImporter:
         x: 756
         y: 401
         width: 47
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_58
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 456
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ui_big_pieces_59
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 456
+        width: 34
         height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

@@ -700,7 +700,7 @@ GameObject:
   - 114: {fileID: 168700707}
   - 114: {fileID: 168700709}
   m_Layer: 11
-  m_Name: 1
+  m_Name: Gem1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -714,7 +714,7 @@ RectTransform:
   m_GameObject: {fileID: 168700705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1744447, y: 1.0048643, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 382866519}
@@ -722,7 +722,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -45.8, y: -0.2}
-  m_SizeDelta: {x: 22, y: 25}
+  m_SizeDelta: {x: 15, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &168700707
 MonoBehaviour:
@@ -743,7 +743,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300072, guid: 7e18ab4b08eba5a4f83d6fd6c7c5c85e, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 0e84925a8a2344d4ab268154b42a9249, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2181,7 +2181,7 @@ GameObject:
   - 114: {fileID: 318681436}
   - 114: {fileID: 318681438}
   m_Layer: 11
-  m_Name: 3
+  m_Name: Gem3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2195,7 +2195,7 @@ RectTransform:
   m_GameObject: {fileID: 318681434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1744446, y: 1.0048643, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 382866519}
@@ -2203,7 +2203,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 44.8, y: -0.20000601}
-  m_SizeDelta: {x: 22, y: 25}
+  m_SizeDelta: {x: 15, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &318681436
 MonoBehaviour:
@@ -2224,7 +2224,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300068, guid: 7e18ab4b08eba5a4f83d6fd6c7c5c85e, type: 3}
+  m_Sprite: {fileID: 21300008, guid: c289fb3f99cbb8640818a86815cd8452, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2322,6 +2322,33 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 11401878, guid: 975a8d35e6c7605499910da03d369e95, type: 2}
+      propertyPath: gemBlue
+      value: 
+      objectReference: {fileID: 105234, guid: bcf2e098d42019e4b8b2c090feb4812a, type: 2}
+    - target: {fileID: 11401878, guid: 975a8d35e6c7605499910da03d369e95, type: 2}
+      propertyPath: gemGreen
+      value: 
+      objectReference: {fileID: 105234, guid: 5060947bd4e4bb149886ce9ddf3afcf4, type: 2}
+    - target: {fileID: 11401878, guid: 975a8d35e6c7605499910da03d369e95, type: 2}
+      propertyPath: gemRed
+      value: 
+      objectReference: {fileID: 105234, guid: 7a003fc651bd5ea4ab8ee9a361955048, type: 2}
+    - target: {fileID: 11401878, guid: 975a8d35e6c7605499910da03d369e95, type: 2}
+      propertyPath: Green
+      value: 
+      objectReference: {fileID: 21300008, guid: 324366b1d9f749c4497171c93c9c7e89,
+        type: 3}
+    - target: {fileID: 11401878, guid: 975a8d35e6c7605499910da03d369e95, type: 2}
+      propertyPath: Red
+      value: 
+      objectReference: {fileID: 21300008, guid: 0e84925a8a2344d4ab268154b42a9249,
+        type: 3}
+    - target: {fileID: 11401878, guid: 975a8d35e6c7605499910da03d369e95, type: 2}
+      propertyPath: Blue
+      value: 
+      objectReference: {fileID: 21300008, guid: c289fb3f99cbb8640818a86815cd8452,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 975a8d35e6c7605499910da03d369e95, type: 2}
   m_IsPrefabParent: 0
@@ -2558,12 +2585,12 @@ GameObject:
   - 222: {fileID: 382866521}
   - 114: {fileID: 382866520}
   m_Layer: 11
-  m_Name: Inventory
+  m_Name: GemUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &382866519
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3166,7 +3193,7 @@ GameObject:
   - 114: {fileID: 519415080}
   - 114: {fileID: 519415082}
   m_Layer: 11
-  m_Name: 2
+  m_Name: Gem2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3180,7 +3207,7 @@ RectTransform:
   m_GameObject: {fileID: 519415078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1744444, y: 1.0048643, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 382866519}
@@ -3188,7 +3215,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.2, y: -0.20000648}
-  m_SizeDelta: {x: 22, y: 25}
+  m_SizeDelta: {x: 15, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &519415080
 MonoBehaviour:
@@ -3209,7 +3236,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300064, guid: 7e18ab4b08eba5a4f83d6fd6c7c5c85e, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 324366b1d9f749c4497171c93c9c7e89, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3412,7 +3439,7 @@ RectTransform:
   - {fileID: 382866519}
   - {fileID: 1370245106}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -3786,7 +3813,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424748, guid: c67c53d951dc74f42b975c5ed3ffcabd, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6135538, guid: c67c53d951dc74f42b975c5ed3ffcabd, type: 2}
       propertyPath: m_Offset.y
@@ -3949,7 +3976,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 771506966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -6387,7 +6414,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -7297,6 +7324,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 128458, guid: b288b8cd6ff3a6f4792151a69b8200a4, type: 2}
+      propertyPath: m_Name
+      value: Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 128458, guid: b288b8cd6ff3a6f4792151a69b8200a4, type: 2}
+      propertyPath: m_TagString
+      value: Gem
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b288b8cd6ff3a6f4792151a69b8200a4, type: 2}
   m_IsPrefabParent: 0
@@ -7966,7 +8001,7 @@ Transform:
   - {fileID: 990616815}
   - {fileID: 521283690}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &1705807837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8850,7 +8885,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -9061,11 +9096,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 429284, guid: e86ab6bff7245074caa639ace1c49845, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -23.68
+      value: -34.72
       objectReference: {fileID: 0}
     - target: {fileID: 429284, guid: e86ab6bff7245074caa639ace1c49845, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.12
+      value: 3.69
       objectReference: {fileID: 0}
     - target: {fileID: 429284, guid: e86ab6bff7245074caa639ace1c49845, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9090,6 +9125,14 @@ Prefab:
     - target: {fileID: 429284, guid: e86ab6bff7245074caa639ace1c49845, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 102892, guid: e86ab6bff7245074caa639ace1c49845, type: 2}
+      propertyPath: m_Name
+      value: Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 102892, guid: e86ab6bff7245074caa639ace1c49845, type: 2}
+      propertyPath: m_TagString
+      value: Gem
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e86ab6bff7245074caa639ace1c49845, type: 2}
@@ -9418,11 +9461,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 404614, guid: 1a08f69a5d6b7034f918ca30b4f4058d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -31.99
+      value: -27.4
       objectReference: {fileID: 0}
     - target: {fileID: 404614, guid: 1a08f69a5d6b7034f918ca30b4f4058d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.71
+      value: 5.53
       objectReference: {fileID: 0}
     - target: {fileID: 404614, guid: 1a08f69a5d6b7034f918ca30b4f4058d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9447,6 +9490,14 @@ Prefab:
     - target: {fileID: 404614, guid: 1a08f69a5d6b7034f918ca30b4f4058d, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 160514, guid: 1a08f69a5d6b7034f918ca30b4f4058d, type: 2}
+      propertyPath: m_Name
+      value: Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 160514, guid: 1a08f69a5d6b7034f918ca30b4f4058d, type: 2}
+      propertyPath: m_TagString
+      value: Gem
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a08f69a5d6b7034f918ca30b4f4058d, type: 2}

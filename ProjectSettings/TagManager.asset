@@ -10,9 +10,9 @@ TagManager:
   - Cart
   - Bullet
   - Coin
-  - Gem
   - Spike
   - Door
+  - Gem
   layers:
   - Default
   - TransparentFX

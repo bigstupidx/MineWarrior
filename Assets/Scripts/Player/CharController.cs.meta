@@ -1,14 +1,19 @@
 fileFormatVersion: 2
 guid: 40ccc4f985c2fc040a75b86a61947386
-timeCreated: 1468691481
+timeCreated: 1469809255
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - bulletPrefab: {instanceID: 0}
-  - muzzleFlashPrefab: {instanceID: 0}
-  - gunshotSound: {instanceID: 0}
-  - jumpEffect: {fileID: 105234, guid: 9be619040b3fbeb44aab80fececdea58, type: 2}
+  - bulletPrefab: {fileID: 180626, guid: 5b9f7a447479900479c2dc3532c33249, type: 2}
+  - muzzleFlashPrefab: {fileID: 448670, guid: 9ae8f8ca17e838444974576a6c1ce651, type: 2}
+  - gunshotSound: {fileID: 144162, guid: 7c646b21842f61949865c79eade8b5e5, type: 2}
+  - door: {instanceID: 0}
+  - GemText: {instanceID: 0}
+  - gemRed: {fileID: 105234, guid: 7a003fc651bd5ea4ab8ee9a361955048, type: 2}
+  - gemGreen: {fileID: 105234, guid: 5060947bd4e4bb149886ce9ddf3afcf4, type: 2}
+  - gemBlue: {fileID: 105234, guid: bcf2e098d42019e4b8b2c090feb4812a, type: 2}
+  - jumpEffect: {fileID: 159004, guid: 94de918cdcf0b0f45864fbbfc3d695f9, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
