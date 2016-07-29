@@ -1553,7 +1553,7 @@ MonoBehaviour:
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1610,7 +1610,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 467455880}
           m_MethodName: buttonLeft
           m_Mode: 1
           m_Arguments:
@@ -1627,7 +1627,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 467455880}
           m_MethodName: buttonReleased
           m_Mode: 1
           m_Arguments:
@@ -2015,7 +2015,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: buttonShoot
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2076,7 +2076,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 467455880}
           m_MethodName: buttonShoot
           m_Mode: 1
           m_Arguments:
@@ -2695,7 +2695,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: buttonJump
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2756,7 +2756,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 467455880}
           m_MethodName: buttonJump
           m_Mode: 1
           m_Arguments:
@@ -2948,6 +2948,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ff6ff856e308b94f82e49fe60a6a61e, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &467455880 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11497294, guid: 975a8d35e6c7605499910da03d369e95,
+    type: 2}
+  m_PrefabInternal: {fileID: 336204351}
+  m_Script: {fileID: 11500000, guid: 74c428f587ca28243a197337cfc60816, type: 3}
 --- !u!4 &473766862 stripped
 Transform:
   m_PrefabParentObject: {fileID: 419418, guid: d653e740d83110347aedddb6d0fa2be6, type: 2}
@@ -5545,7 +5551,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: buttonRight
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5606,7 +5612,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 467455880}
           m_MethodName: buttonRight
           m_Mode: 1
           m_Arguments:
@@ -5623,7 +5629,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 467455880}
           m_MethodName: buttonReleased
           m_Mode: 1
           m_Arguments:
