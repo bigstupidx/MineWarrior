@@ -206,7 +206,10 @@ public class CharController : MonoBehaviour
                 }
                 break;
             case "Enemy":
-                healthManager.TakeDamage(25f);
+                healthManager.TakeDamage(50f);
+                break;
+            case "Spike":
+                healthManager.TakeDamage(Mathf.Infinity);
                 break;
             default:
                 break;
@@ -218,9 +221,6 @@ public class CharController : MonoBehaviour
 
         switch (col.gameObject.tag)
         {
-            case "Spike":
-                healthManager.TakeDamage(50f);
-                break;
             case "Enemy":
                 healthManager.TakeDamage(25f);
                 break;
@@ -237,7 +237,7 @@ public class CharController : MonoBehaviour
         {
             door.SetActive(true);
         }        
-        Destroy(Instantiate(gemEffect, gem.transform.position, gem.transform.rotation), 3);
+        Destroy(Instantiate(gemEffect, gem.transform.position, gem.transform.rotation), 5f);
 
         switch (collectedGems)
         {

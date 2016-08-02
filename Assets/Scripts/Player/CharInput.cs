@@ -65,7 +65,7 @@ public class CharInput : MonoBehaviour
     }
 
 
-#elif UNITY_EDITOR
+#elif UNITY_EDITOR || UNITY_STANDALONE_WIN
 
     void Start()
     {

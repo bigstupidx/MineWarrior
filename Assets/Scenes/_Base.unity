@@ -171,10 +171,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11400424, guid: a57242ba67aec9343a7aa0e7265186ea, type: 2}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1732587301}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a57242ba67aec9343a7aa0e7265186ea, type: 2}
   m_IsPrefabParent: 0
@@ -285,10 +281,6 @@ Camera:
   m_PrefabParentObject: {fileID: 2083700, guid: a57242ba67aec9343a7aa0e7265186ea,
     type: 2}
   m_PrefabInternal: {fileID: 195634920}
---- !u!4 &1732587301 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 402650, guid: 975a8d35e6c7605499910da03d369e95, type: 2}
-  m_PrefabInternal: {fileID: 1066533519}
 --- !u!114 &1752476392 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11405190, guid: 7a08966b178c309439a2b7d6cd505dcf,

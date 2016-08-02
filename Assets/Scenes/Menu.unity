@@ -713,8 +713,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 111bd893106556e4da6d4a46f1a78f1c, type: 3}
-    m_FontSize: 57
+    m_Font: {fileID: 12800000, guid: 246d8fa3205691e42b32210579e9d656, type: 3}
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -796,7 +796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9455472, g: 0.9485294, b: 0.7323205, a: 1}
+  m_Color: {r: 0.7058823, g: 0.5936284, b: 0.12456746, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -804,8 +804,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 111bd893106556e4da6d4a46f1a78f1c, type: 3}
-    m_FontSize: 140
+    m_Font: {fileID: 12800000, guid: 246d8fa3205691e42b32210579e9d656, type: 3}
+    m_FontSize: 99
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -816,7 +816,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: BLONDE BEARD
+  m_Text: Blonde Beard
 --- !u!222 &1842516449
 CanvasRenderer:
   m_ObjectHideFlags: 0

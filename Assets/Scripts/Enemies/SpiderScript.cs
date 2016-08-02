@@ -26,7 +26,7 @@ public class SpiderScript : MonoBehaviour
     void Awake()
     {
         startPos = transform.position;
-        topPos = new Vector2(transform.position.x, 25f);
+        topPos = new Vector2(transform.position.x, transform.position.y);
     }
 
     void Start()
