@@ -1,15 +1,14 @@
-﻿Shader "Custom/Basic Shader"
-{
-	Properties
-	{
-		_MainColor("Color", Color) = (1.0,1.0,1.0,1.0)
+﻿Shader "Custom/Basic Shader" {
+	Properties {
+		_Color("Color", Color) = (1.0,1.0,1.0,1.0)
 	}
-		SubShader
-	{
-		Pass
-		{
+	SubShader {
+		Pass {
 			CGPROGRAM
-			
+
+			#pragma vertex vert
+			#pragma fragment frag
+
 			float4 _Color;
 
 			struct vertexInput
@@ -24,10 +23,21 @@
 
 			vertexOutput vert(vertexInput v)
 			{
+				vertexOutput o;
+				
+				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 
+				return o;
 			}
 			
+			float4 frag(vertexOutput i) : Color
+			{
+				return _Color;
+			}
+
 			ENDCG
 		}
 	}
+	// Fallback Shader
+	//Fallback "Diffuse"
 }
