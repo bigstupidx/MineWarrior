@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class CharController : MonoBehaviour 
+public class CharController : MonoBehaviour
 {
 
     #region Inspector Variables
@@ -25,11 +25,17 @@ public class CharController : MonoBehaviour
     Transform muzzleFlashPrefab;
     [SerializeField]
     GameObject gunshotSound;
+    [SerializeField]
+    float fireRate = 0;
+    [SerializeField]
+    float damage = 10;
+
+    float timeToFire = 0;
 
     [Header("Misc Variables")]
 
     [SerializeField]
-    GameObject door;    
+    GameObject door;
     [SerializeField]
     Text GemText;
 
@@ -73,8 +79,8 @@ public class CharController : MonoBehaviour
 
     #endregion
 
-    void Awake() 
-	{
+    void Awake()
+    {
         // Set up references
         door = GameObject.FindGameObjectWithTag("Door");
         groundCheck = transform.Find("GroundCheck");
@@ -114,10 +120,11 @@ public class CharController : MonoBehaviour
     public void TakeInput(float move, bool jump, bool shoot)
     {
         body2D.velocity = new Vector2(move * MaxSpeed, body2D.velocity.y);
-        if(move != 0)
+        if (move != 0)
         {
             anim.SetBool("Walking", true);
-        } else
+        }
+        else
         {
             anim.SetBool("Walking", false);
         }
@@ -145,11 +152,20 @@ public class CharController : MonoBehaviour
             Grounded = false;
             body2D.AddForce(new Vector2(0f, JumpForce));
         }
-                
-        if(shoot)
+        if (fireRate == 0)
         {
-            Shoot();
-        }                
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Shoot();
+            }
+        }
+        else {
+            if (Input.GetButton("Fire1") && Time.time > timeToFire)
+            {
+                timeToFire = Time.time + 1 / fireRate;
+                Shoot();
+            }
+        }
     }
 
     public void Shoot()
@@ -164,17 +180,17 @@ public class CharController : MonoBehaviour
         Destroy(sound, .6f);
 
         if (!facingRight)
-        { 
+        {
             bullet.GetComponent<InstantVelocity>().velocity.x *= -1;
             Vector2 bulletScale = bullet.transform.localScale;
             bulletScale.x *= -1;
-            bullet.transform.localScale = bulletScale;            
+            bullet.transform.localScale = bulletScale;
         }
         Destroy(bullet, 1f);
     }
 
-    void Flip() 
-	{
+    void Flip()
+    {
         facingRight = !facingRight;
 
         Vector3 playerScale = transform.localScale;
@@ -189,7 +205,8 @@ public class CharController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
 
-        switch (col.gameObject.tag) {
+        switch (col.gameObject.tag)
+        {
 
             case "Gem":
                 switch (col.gameObject.name)
@@ -214,7 +231,7 @@ public class CharController : MonoBehaviour
             default:
                 break;
         }
-   }
+    }
 
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -229,14 +246,14 @@ public class CharController : MonoBehaviour
         }
     }
 
-    void DestroyGem (GameObject gem, GameObject gemEffect, Sprite gemImg)
+    void DestroyGem(GameObject gem, GameObject gemEffect, Sprite gemImg)
     {
         Destroy(gem);
         collectedGems++;
         if (collectedGems == totalGems)
         {
             door.SetActive(true);
-        }        
+        }
         Destroy(Instantiate(gemEffect, gem.transform.position, gem.transform.rotation), 5f);
 
         switch (collectedGems)
