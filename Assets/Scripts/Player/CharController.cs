@@ -154,13 +154,13 @@ public class CharController : MonoBehaviour
         }
         if (fireRate == 0)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (shoot)
             {
                 Shoot();
             }
         }
         else {
-            if (Input.GetButton("Fire1") && Time.time > timeToFire)
+            if (shoot && Time.time > timeToFire)
             {
                 timeToFire = Time.time + 1 / fireRate;
                 Shoot();

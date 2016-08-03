@@ -51,6 +51,11 @@ public class CharInput : MonoBehaviour
         Shoot = true;
     }
 
+    public void shootRelease()
+    {
+        Shoot = false;
+    }
+
     void Update()
     {
 
@@ -61,7 +66,6 @@ public class CharInput : MonoBehaviour
         Character.TakeInput(h, Jump, Shoot);
 
         Jump = false;
-        Shoot = false;
     }
 
 
@@ -80,7 +84,7 @@ public class CharInput : MonoBehaviour
         }
         if(!Shoot)
         {
-            Shoot = Input.GetButtonDown("Fire1");
+            Shoot = Input.GetButton("Fire1");
         }
     }
 
