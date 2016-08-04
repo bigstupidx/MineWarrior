@@ -388,7 +388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damping: 1
   lookAheadFactor: 3
-  lookAheadReturnSpeed: 0.5
+  lookAheadReturnSpeed: 1000000
   lookAheadMoveThreshold: 0.1
   shakeTimer: 0
   shakeTime: 0
