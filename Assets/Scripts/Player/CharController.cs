@@ -200,8 +200,9 @@ public class CharController : MonoBehaviour
 
     public void Die()
     {
-        SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
+        StartCoroutine(KillPlayer());
     }
+
     void OnTriggerEnter2D(Collider2D col)
     {
 
@@ -274,5 +275,25 @@ public class CharController : MonoBehaviour
                 break;
         }
     }
+
+    #region Coroutines
+
+    IEnumerator KillPlayer()
+    {
+       SpriteRenderer[] sprites = transform.GetComponentsInChildren<SpriteRenderer>();
+
+        foreach(SpriteRenderer sprite in sprites)
+        {
+            sprite.enabled = false;            
+        }    
+               
+
+        yield return new WaitForSeconds(1.5f);
+
+        SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
+
+    }
+
+    #endregion
 
 }

@@ -71,7 +71,7 @@ public class SpiderScript : MonoBehaviour
             if (hit.collider.tag == "Player" && _cMState == MState.Idle)
             {
                 _cMState = MState.Down;               
-                endPos = hit.transform.position;
+                endPos = new Vector3(hit.transform.position.x, hit.transform.position.y - 0, hit.transform.position.z);
                 StartCoroutine(GoBackUp());
             }
         }

@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    public float Health;
     public LayerMask enemyMask;
     public LayerMask otherMask;
     Transform myTrans;
@@ -18,7 +17,6 @@ public class Enemy : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-        Health = 100;
         myTrans = this.transform;
         mybody = this.GetComponent<Rigidbody2D>();
         MyWidth = this.GetComponent<SpriteRenderer>().bounds.extents.x;
@@ -27,13 +25,6 @@ public class Enemy : MonoBehaviour
     {
         switch (coll.gameObject.tag)
         {
-            case "Bullet":
-                Health -= 50;
-                if (Health <= 0)
-                {
-                    Destroy(this.gameObject);
-                }
-                break;
             case "Box":
                 Destroy(this.gameObject);
                 Destroy(Instantiate(enemyEffect, transform.position, transform.rotation), 2f);

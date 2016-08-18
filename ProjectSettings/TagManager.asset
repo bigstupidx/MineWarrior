@@ -13,6 +13,7 @@ TagManager:
   - Spike
   - Door
   - Gem
+  - TNT
   layers:
   - Default
   - TransparentFX

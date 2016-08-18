@@ -19,9 +19,23 @@ public class Bullet : MonoBehaviour
                 Destroy(2);
                 break;
             case "Coin":
+                break;            
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        switch (coll.gameObject.tag)
+        {
+            case "Player":
                 break;
-            default:
-                Destroy(1);
+            case "Box":
+                Destroy(0);
+                break;
+            case "Enemy":
+                Destroy(2);
+                break;
+            case "Coin":
                 break;
         }
     }
