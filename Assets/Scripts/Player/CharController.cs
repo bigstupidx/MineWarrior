@@ -48,6 +48,8 @@ public class CharController : MonoBehaviour
     GameObject gemBlue;
     [SerializeField]
     GameObject jumpEffect;
+    [SerializeField]
+    GameObject deathEffect;
 
     #endregion
 
@@ -280,15 +282,18 @@ public class CharController : MonoBehaviour
 
     IEnumerator KillPlayer()
     {
-       SpriteRenderer[] sprites = transform.GetComponentsInChildren<SpriteRenderer>();
+        Destroy(Instantiate(deathEffect, transform.position, transform.rotation), 3f);
+        SpriteRenderer[] sprites = transform.GetComponentsInChildren<SpriteRenderer>();
 
         foreach(SpriteRenderer sprite in sprites)
         {
             sprite.enabled = false;            
-        }    
-               
+        }
 
-        yield return new WaitForSeconds(1.5f);
+        MaxSpeed = 0;
+
+        yield return new WaitForSeconds(.75f);
+
 
         SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
 

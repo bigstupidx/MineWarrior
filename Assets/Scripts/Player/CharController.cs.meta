@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 40ccc4f985c2fc040a75b86a61947386
-timeCreated: 1469809255
+timeCreated: 1472438354
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
@@ -14,6 +14,10 @@ MonoImporter:
   - gemGreen: {fileID: 105234, guid: 5060947bd4e4bb149886ce9ddf3afcf4, type: 2}
   - gemBlue: {fileID: 105234, guid: bcf2e098d42019e4b8b2c090feb4812a, type: 2}
   - jumpEffect: {fileID: 159004, guid: 94de918cdcf0b0f45864fbbfc3d695f9, type: 2}
+  - deathEffect: {fileID: 105234, guid: 9f2153b8d94f15e4fa1059a434b7d942, type: 2}
+  - Red: {instanceID: 0}
+  - Green: {instanceID: 0}
+  - Blue: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

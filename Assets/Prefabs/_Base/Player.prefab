@@ -379,6 +379,7 @@ MonoBehaviour:
   gemGreen: {fileID: 105234, guid: 5060947bd4e4bb149886ce9ddf3afcf4, type: 2}
   gemBlue: {fileID: 105234, guid: bcf2e098d42019e4b8b2c090feb4812a, type: 2}
   jumpEffect: {fileID: 159004, guid: 94de918cdcf0b0f45864fbbfc3d695f9, type: 2}
+  deathEffect: {fileID: 105234, guid: 9f2153b8d94f15e4fa1059a434b7d942, type: 2}
   Red: {fileID: 21300008, guid: 0e84925a8a2344d4ab268154b42a9249, type: 3}
   Green: {fileID: 21300008, guid: 324366b1d9f749c4497171c93c9c7e89, type: 3}
   Blue: {fileID: 21300008, guid: c289fb3f99cbb8640818a86815cd8452, type: 3}

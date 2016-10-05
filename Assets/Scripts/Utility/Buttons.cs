@@ -19,7 +19,7 @@ public class Buttons : MonoBehaviour
     IEnumerator changeScene(int levelIndex)
     {
         Instantiate(changeEffect);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(.75f);
         SceneManager.LoadScene(levelIndex);
     }
 }
