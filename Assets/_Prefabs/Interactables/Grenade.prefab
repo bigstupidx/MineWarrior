@@ -12,8 +12,9 @@ GameObject:
   - 50: {fileID: 5035642}
   - 61: {fileID: 6168496}
   - 114: {fileID: 11491712}
+  - 114: {fileID: 114000012138819134}
   m_Layer: 8
-  m_Name: TNT
+  m_Name: Grenade
   m_TagString: TNT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,7 +106,7 @@ SpriteRenderer:
   m_SortingLayerID: -1951981627
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a350e41fc83babb45ab497c917a9db08, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.051362462, g: 0.2794118, b: 0.0529352, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000
@@ -119,3 +120,16 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 116482}
   m_IsPrefabParent: 1
+--- !u!114 &114000012138819134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed9e3ba1b9358a46906faecd90b1b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 2500
+  y: 2500

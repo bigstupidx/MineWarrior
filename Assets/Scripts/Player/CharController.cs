@@ -22,15 +22,20 @@ public class CharController : MonoBehaviour
     [SerializeField]
     GameObject bulletPrefab;
     [SerializeField]
+    GameObject grenadePrefab;
+    [SerializeField]
     Transform muzzleFlashPrefab;
     [SerializeField]
     GameObject gunshotSound;
     [SerializeField]
     float fireRate = 0;
     [SerializeField]
+    float grenadeRate = 0;
+    [SerializeField]
     float damage = 10;
 
     float timeToFire = 0;
+    float timeToThrow = 0;
 
     [Header("Misc Variables")]
 
@@ -70,11 +75,16 @@ public class CharController : MonoBehaviour
     const float groundCheckRadius = .2f;
     bool Grounded;
     Rigidbody2D body2D;
+
+    [SerializeField]
     bool facingRight = true;
     Animator anim;
 
     // Shooting
     Transform firePoint;
+    // Grenade
+    [SerializeField]
+    Transform grenadePoint;
 
     // References
     PlayerHealth healthManager;
@@ -119,7 +129,7 @@ public class CharController : MonoBehaviour
         }
     }
 
-    public void TakeInput(float move, bool jump, bool shoot)
+    public void TakeInput(float move, bool jump, bool shoot, bool grenade)
     {
         body2D.velocity = new Vector2(move * MaxSpeed, body2D.velocity.y);
         if (move != 0)
@@ -168,6 +178,12 @@ public class CharController : MonoBehaviour
                 Shoot();
             }
         }
+
+        if (grenade && Time.time > timeToThrow)
+        {
+            timeToThrow = Time.time + 1 / grenadeRate;
+            throwGrenade();
+        }
     }
 
     public void Shoot()
@@ -189,6 +205,24 @@ public class CharController : MonoBehaviour
             bullet.transform.localScale = bulletScale;
         }
         Destroy(bullet, 1f);
+    }
+
+    public void throwGrenade()
+    {
+        GameObject grenade = Instantiate(grenadePrefab, grenadePoint.position, firePoint.rotation) as GameObject;        
+
+        if (!facingRight)
+        {
+            if (grenade)
+            {
+                grenade.GetComponent<InitialVelocity>().x *= -1;
+                Vector2 bulletScale = grenade.transform.localScale;
+                bulletScale.x *= -1;
+                grenade.transform.localScale = bulletScale;
+            }
+        }
+        StartCoroutine(BlowGrenade(2.0f, grenade));
+
     }
 
     void Flip()
@@ -285,9 +319,9 @@ public class CharController : MonoBehaviour
         Destroy(Instantiate(deathEffect, transform.position, transform.rotation), 3f);
         SpriteRenderer[] sprites = transform.GetComponentsInChildren<SpriteRenderer>();
 
-        foreach(SpriteRenderer sprite in sprites)
+        foreach (SpriteRenderer sprite in sprites)
         {
-            sprite.enabled = false;            
+            sprite.enabled = false;
         }
 
         MaxSpeed = 0;
@@ -297,6 +331,15 @@ public class CharController : MonoBehaviour
 
         SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
 
+    }
+
+    IEnumerator BlowGrenade(float time, GameObject grenade)
+    {
+        yield return new WaitForSeconds(time);
+        if (grenade)
+        {
+            grenade.GetComponent<TNT>().Boom();
+        }
     }
 
     #endregion

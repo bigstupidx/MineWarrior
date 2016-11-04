@@ -19,7 +19,10 @@ public class Bullet : MonoBehaviour
                 Destroy(2);
                 break;
             case "Coin":
-                break;            
+                break;
+            default:
+                Destroy(0);
+                break;
         }
     }
 
@@ -36,6 +39,9 @@ public class Bullet : MonoBehaviour
                 Destroy(2);
                 break;
             case "Coin":
+                break;
+            default:
+                Destroy(0);
                 break;
         }
     }

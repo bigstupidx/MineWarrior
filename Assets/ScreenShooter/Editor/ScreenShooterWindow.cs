@@ -53,7 +53,7 @@ namespace Borodar.ScreenShooter
         {
             var window = (ScreenShooterWindow) GetWindow(typeof(ScreenShooterWindow));
             window.autoRepaintOnSceneChange = true;
-            window.title = "Screen Shooter";
+            window.titleContent.text = "Screen Shooter";
             window.Show();
         }
 

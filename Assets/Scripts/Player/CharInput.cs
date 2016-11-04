@@ -7,6 +7,7 @@ public class CharInput : MonoBehaviour
     private CharController Character;
     private bool Jump;
     public bool Shoot;
+    public bool Throw;
 
     public GameObject buttonControls;
 
@@ -56,16 +57,17 @@ public class CharInput : MonoBehaviour
         Shoot = false;
     }
 
-    void Update()
+    public void throwGrenade()
     {
-
+        Throw = true
     }
 
     private void FixedUpdate()
     {
-        Character.TakeInput(h, Jump, Shoot);
+        Character.TakeInput(h, Jump, Shoot, Throw);
 
         Jump = false;
+        Throw = false;
     }
 
 
@@ -86,14 +88,19 @@ public class CharInput : MonoBehaviour
         {
             Shoot = Input.GetButton("Fire1");
         }
+        if(!Throw)
+        {
+            Throw = Input.GetButton("Fire2");
+        }
     }
 
     private void FixedUpdate()
     {
         float h = Input.GetAxis("Horizontal");
-        Character.TakeInput(h, Jump, Shoot);
+        Character.TakeInput(h, Jump, Shoot, Throw);
         Jump = false;
         Shoot = false;
+        Throw = false;
     }
 #endif
 }
